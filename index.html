@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Example</title>
+    <style>
+        body {
+            background-image: url("coffe.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #fcd068;
+        }
+
+        fieldset {
+            border: 2px solid #333;
+            width: 80%;
+            max-width: 500px;
+            padding: 20px;
+            background-color:  #f9aa50; 
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 0 10px;
+            color: #333;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        input[type="text"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        hr {
+            border: 1px solid #333;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="overlay">
+        <div class="sidebar">
+            <img src="latte.jpg" alt="Latte">
+            <img src="american.jpg" alt="American Coffee">
+            <img src="moca.jpg" alt="Moca">
+            <img src="spain.jpg" alt="Spain Coffee">
+            <img src="cappuccino.jpg" alt="Cappuccino">
+        </div>
+        <h1>3MOOR COFFE</h1>
+        <fieldset>
+            <legend>Enter your information</legend>
+            
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname">
+            
+            <hr>
+            
+            <label>Choose your fav size:</label>
+            <label for="L"><input type="radio" id="L" name="SIZE" value="L"> L</label>
+            <label for="M"><input type="radio" id="M" name="SIZE" value="M"> M</label>
+            <label for="S"><input type="radio" id="S" name="SIZE" value="S"> S</label>
+            
+            <hr>
+            
+            <label for="city">Choose COFFE:</label>
+            <select id="city" name="g">
+                <option value="f">LATTE</option>
+                <option value="e">AMERICAN</option>
+                <option value="d">MOCA</option>
+                <option value="c">SPAIN</option>
+                <option value="a">CAPPUCCINO</option>
+            </select>
+            
+            <input type="submit" value="Submit">
+        </fieldset>
+    </div>
+</body>
+</html>
